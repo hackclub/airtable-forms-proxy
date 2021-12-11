@@ -8,5 +8,13 @@ export default async function handler(req, res) {
     apiKey: API_KEY,
     tableName: req.query.table,
   });
-  res.json(await airtable.create(req.body));
+  
+  const returnedByAirtable = await airtable.create(req.body);
+  
+  try {
+    res.redirect(req.query.redirect);
+  }
+  catch {
+    res.json(returnedByAirtable);
+  }
 }
