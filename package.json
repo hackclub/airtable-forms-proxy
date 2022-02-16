@@ -1,8 +1,8 @@
 {
-  "name": "givebutter-waitlist",
+  "name": "airtable-forms-proxy",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/hackclub/givebutter-waitlist.git",
+  "repository": "https://github.com/hackclub/airtable-forms-proxy.git",
   "author": "Sam Poder <39828164+sampoder@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
