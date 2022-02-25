@@ -12,6 +12,9 @@ export default async function handler(req, res) {
   const returnedByAirtable = await airtable.create(req.body);
   
   try {
+    if (req.query.redirect == "blank"){
+      res.status(204).end();
+    }
     res.writeHead(302, { Location: req.query.redirect }).end();
   }
   catch {
