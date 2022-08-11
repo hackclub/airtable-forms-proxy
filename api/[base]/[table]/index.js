@@ -3,6 +3,10 @@ const AirtablePlus = require("airtable-plus");
 const API_KEY = process.env.AIRTABLE;
 
 export default async function handler(req, res) {
+  if(req.method == "OPTIONS") {
+    return res.status(200).end()
+  }
+
   const airtable = new AirtablePlus({
     baseID: req.query.base,
     apiKey: API_KEY,
